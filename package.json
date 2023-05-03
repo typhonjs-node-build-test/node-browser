@@ -1,0 +1,51 @@
+{
+  "name": "@typhonjs-build-test/node-browser",
+  "description": "Provides a single module collecting all build / test resources for node & browser testing TyphonJS modules.",
+  "version": "0.0.0",
+  "author": "Michael Leahy <support@typhonjs.io> (https://github.com/typhonrt)",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "contributors": [
+    "Michael Leahy <support@typhonjs.io> (https://github.com/typhonrt)"
+  ],
+  "dependencies": {
+    "@rollup/plugin-node-resolve": "^15",
+    "@typhonjs-build-test/node": "^0.0.6",
+    "nyc": "^15",
+    "polka": "^0.5.0",
+    "puppeteer-core": "^20",
+    "rollup-plugin-istanbul": "^4",
+    "sirv": "^2"
+  },
+  "devDependencies": {
+    "rollup": "^3"
+  },
+  "peerDependencies": {
+    "rollup": "^3"
+  },
+  "types": "./types/index.d.ts",
+  "files": [
+    "/npm-shrinkwrap.json",
+    "/lib",
+    "/src",
+    "/types"
+  ],
+  "homepage": "https://github.com/typhonjs-node-build-test/node-browser#readme",
+  "keywords": [
+    "typhonjs",
+    "utils",
+    "build",
+    "test",
+    "browser"
+  ],
+  "license": "MPL-2.0",
+  "bugs": "https://github.com/typhonjs-node-build-test/node-browser/issues",
+  "repository": "github:typhonjs-node-build-test/node-browser",
+  "scripts": {
+    "eslint": "eslint .",
+    "prepublishOnly": "npm run eslint",
+    "types": "node -e \"import('@typhonjs-build-test/esm-d-ts').then(module => { module.generateDTS({ input: './src/index.js', output: './types/index.d.ts' }) });\""
+  }
+}

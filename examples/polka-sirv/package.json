@@ -1,0 +1,40 @@
+{
+  "name": "demo-module",
+  "description": "Provides a basic demo example for @typhonjs-utils/build-test-browser",
+  "private": true,
+  "version": "0.0.0",
+  "author": "Michael Leahy <support@typhonjs.io> (https://github.com/typhonrt)",
+  "type": "module",
+  "exports": {
+    ".": {
+      "node": "./dist/node/DemoModule.js",
+      "browser": "./dist/browser/DemoModule.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "contributors": [
+    "Michael Leahy <support@typhonjs.io> (https://github.com/typhonrt)"
+  ],
+  "devDependencies": {
+    "@typhonjs-build-test/node-browser": "^0.0.0",
+    "rollup": "^3"
+  },
+  "files": [
+    "/dist",
+    "/src"
+  ],
+  "keywords": [
+    "demo",
+    "module"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "bundle": "rollup --config",
+    "eslint": "eslint .",
+    "prepublishOnly": "npm run eslint",
+    "posttest-browser": "nyc report --exclude-after-remap=true --reporter=lcov --reporter=text-summary --report-dir=coverage-browser",
+    "pretest-browser": "rollup --config rollup.config.browser-test.js",
+    "test-browser": "node ./test/src/browser/run.js",
+    "test-node": "c8 --exclude-after-remap=true --reporter=lcov --reporter=text-summary mocha -colors \"test/src/node/**/*.test.js\" --timeout 5000"
+  }
+}

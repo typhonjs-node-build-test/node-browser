@@ -1,0 +1,15 @@
+.dts
+.idea
+.DS_Store
+npm-debug.log
+*-debug.log
+*-error.log
+/.nyc_output
+/coverage
+/coverage-browser
+/dist
+node_modules
+/test/public/fixture
+test/public/DemoModule.js
+test/public/DemoModule.js.map
+test/public/TestsuiteRunner.js
