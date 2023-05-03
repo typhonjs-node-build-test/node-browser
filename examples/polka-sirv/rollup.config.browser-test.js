@@ -21,7 +21,7 @@ export default () =>
          output: [{
             file: `${s_TEST_BROWSER_PATH}/DemoModule.js`,
             format: 'es',
-            preferConst: true,
+            generatedCode: { constBindings: true },
             sourcemap: s_SOURCEMAP,
             sourcemapPathTransform: (sourcePath) => sourcePath.replace(relativeTestBrowserPath, `.`)
          }],
@@ -36,7 +36,7 @@ export default () =>
          output: [{
             file: `${s_TEST_BROWSER_PATH}/TestsuiteRunner.js`,
             format: 'es',
-            preferConst: true
+            generatedCode: { constBindings: true },
          }],
          plugins: [
             resolve({ browser: true })

@@ -1,7 +1,7 @@
 {
   "name": "@typhonjs-build-test/node-browser",
   "description": "Provides a single module collecting all build / test resources for node & browser testing TyphonJS modules.",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "author": "Michael Leahy <support@typhonjs.io> (https://github.com/typhonrt)",
   "type": "module",
   "exports": {

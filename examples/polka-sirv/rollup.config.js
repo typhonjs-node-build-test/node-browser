@@ -14,7 +14,7 @@ export default () =>
          output: [{
             file: `${s_DIST_PATH_NODE}${path.sep}DemoModule.js`,
             format: 'es',
-            preferConst: true,
+            generatedCode: { constBindings: true },
             sourcemap: s_SOURCEMAP,
          }],
          plugins: [
@@ -28,7 +28,7 @@ export default () =>
          output: [{
             file: `${s_DIST_PATH_BROWSER}${path.sep}DemoModule.js`,
             format: 'es',
-            preferConst: true,
+            generatedCode: { constBindings: true },
             sourcemap: s_SOURCEMAP,
          }],
          plugins: [

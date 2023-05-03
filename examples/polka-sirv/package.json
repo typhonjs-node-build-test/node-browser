@@ -16,7 +16,7 @@
     "Michael Leahy <support@typhonjs.io> (https://github.com/typhonrt)"
   ],
   "devDependencies": {
-    "@typhonjs-build-test/node-browser": "^0.0.0",
+    "@typhonjs-build-test/node-browser": "0.0.1",
     "rollup": "^3"
   },
   "files": [
