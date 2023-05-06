@@ -1,7 +1,7 @@
 {
   "name": "@typhonjs-build-test/node-browser",
   "description": "Provides a single module collecting all build / test resources for node & browser testing TyphonJS modules.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Michael Leahy <support@typhonjs.io> (https://github.com/typhonrt)",
   "type": "module",
   "exports": {
@@ -12,7 +12,7 @@
   ],
   "dependencies": {
     "@rollup/plugin-node-resolve": "^15",
-    "@typhonjs-build-test/node": "^0.0.6",
+    "@typhonjs-build-test/node": "^0.0.7",
     "nyc": "^15",
     "polka": "^0.5.0",
     "puppeteer-core": "^20",
