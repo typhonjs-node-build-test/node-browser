@@ -141,4 +141,4 @@ type TestSuiteOptions = {
     pageConsole?: Function;
 };
 
-export { BrowserRunner, RunServerAndTestSuiteOptions, TestSuiteOptions, waitForMessage };
+export { BrowserRunner, type RunServerAndTestSuiteOptions, type TestSuiteOptions, waitForMessage };
