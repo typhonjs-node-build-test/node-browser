@@ -1,28 +1,31 @@
 {
   "name": "@typhonjs-build-test/node-browser",
   "description": "Provides a single module collecting all build / test resources for node & browser testing TyphonJS modules.",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "author": "Michael Leahy <support@typhonjs.io> (https://github.com/typhonrt)",
   "type": "module",
   "exports": {
-    ".": "./src/index.js"
+    ".": {
+      "types": "./types/index.d.ts",
+      "import": "./src/index.js"
+    }
   },
   "contributors": [
     "Michael Leahy <support@typhonjs.io> (https://github.com/typhonrt)"
   ],
   "dependencies": {
-    "@typhonjs-build-test/node": "^0.0.9",
-    "nyc": "^15",
-    "polka": "^0.5.0",
-    "puppeteer-core": "^20",
-    "rollup-plugin-istanbul": "^4",
-    "sirv": "^2"
+    "@typhonjs-build-test/node": "^0.0.10",
+    "nyc": "^15.1.0",
+    "polka": "^0.5.2",
+    "puppeteer-core": "^21",
+    "rollup-plugin-istanbul": "^5",
+    "sirv": "^2.0.4"
   },
   "devDependencies": {
-    "rollup": "^3"
+    "rollup": "^4.9.4"
   },
   "peerDependencies": {
-    "rollup": "^3.0.0"
+    "rollup": "3.3-4"
   },
   "types": "./types/index.d.ts",
   "files": [
@@ -45,6 +48,6 @@
   "scripts": {
     "eslint": "eslint .",
     "prepublishOnly": "npm run eslint",
-    "types": "node -e \"import('@typhonjs-build-test/esm-d-ts').then(module => { module.generateDTS({ input: './src/index.js', output: './types/index.d.ts' }) });\""
+    "types": "esm-d-ts gen src/index.js -o types/index.d.ts"
   }
 }
