@@ -34,10 +34,10 @@ In the example directory there is an `env` directory w/ `puppeteer.env`. You mus
 
 Add this module as a `devDependency` and the following modules are added:
 
-- [@rollup/plugin-node-resolve@15.0.2](https://www.npmjs.com/package/@rollup/plugin-node-resolve) 
-- [@typhonjs-build-test/node@0.0.6](https://www.npmjs.com/package/@typhonjs-build-test/node)
+- [@typhonjs-build-test/node@0.0.11](https://www.npmjs.com/package/@typhonjs-build-test/node)
 - [nyc@15.1.0](https://www.npmjs.com/package/nyc)
 - [polka@0.5.2](https://www.npmjs.com/package/polka)
-- [puppeteer-core@20.1.0](https://www.npmjs.com/package/puppeteer-core)
-- [rollup-plugin-istanbul@4.0.0](https://www.npmjs.com/package/sirv)
-- [sirv@2.0.3](https://www.npmjs.com/package/sirv)
+- [puppeteer-core@21.7.0](https://www.npmjs.com/package/puppeteer-core)
+- [rollup-plugin-istanbul@5.0.0](https://www.npmjs.com/package/sirv)
+- [sirv@2.0.4](https://www.npmjs.com/package/sirv)
+- [sirv-cli@2.0.2](https://www.npmjs.com/package/sirv-cli)
